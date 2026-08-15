@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Government Builder Prototype</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Subsystem Prototype</p>
+          <h1>Government Builder</h1>
+        </div>
+        <a class="back-link" href="../../index.html">Back to main prototype</a>
+      </header>
+
+      <main class="layout">
+        <section class="panel controls-panel">
+          <h2>Government Definition</h2>
+
+          <label>
+            Government name
+            <input id="government-name" type="text" value="The Commons Assembly" />
+          </label>
+
+          <label>
+            Template
+            <select id="government-template">
+              <option value="democracy">Democracy</option>
+              <option value="dictatorship">Dictatorship</option>
+              <option value="anarchy">Anarchy</option>
+              <option value="commune">Commune</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+
+          <button id="load-template" class="secondary">Load Template</button>
+
+          <div class="section-block">
+            <h3>Roles</h3>
+            <div class="inline-form">
+              <input id="new-role-name" type="text" placeholder="Role name" />
+              <button id="add-role" class="secondary">Add Role</button>
+            </div>
+            <div id="role-list" class="list-panel"></div>
+          </div>
+
+          <div class="section-block">
+            <h3>Permissions</h3>
+            <div class="inline-form compact">
+              <input id="new-action-name" type="text" placeholder="Permission name" />
+              <button id="add-action" class="secondary">Add Permission</button>
+            </div>
+            <div id="action-list" class="list-panel"></div>
+          </div>
+
+          <div class="section-block">
+            <h3>Mock Players</h3>
+            <div class="inline-form">
+              <input id="new-player-name" type="text" placeholder="Player name" />
+              <button id="add-player" class="secondary">Add Player</button>
+            </div>
+            <div id="player-list" class="list-panel"></div>
+          </div>
+        </section>
+
+        <section class="panel output-panel">
+          <h2>Government Summary</h2>
+          <div id="government-output" class="government-output"></div>
+
+          <h3>Role Permission Matrix</h3>
+          <div id="permission-output" class="permission-table"></div>
+
+          <h3>Player Permissions</h3>
+          <div id="player-permissions-output" class="player-permissions"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="government-builder.js"></script>
+  </body>
+</html>
